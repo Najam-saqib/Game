@@ -5,8 +5,8 @@
  * This class holds an enumeration of all command words known to the game.
  * It is used to recognise commands as they are typed in.
  *
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * @author  Najam
+ * @version 2.1
  */
 package ass3.mygame2;
 

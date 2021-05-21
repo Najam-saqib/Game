@@ -10,15 +10,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- *<h2>Assignment 3</h2>
- *<p>This is a <b>GameClass</b> program for
- *<a href=https://www.scu.edu.au/study-at-scu/units/csc93001/>CSC93001.</a>
- *
- *This is an example of "World of Zuul".
- *</p>
- *<p>We have also discussed when a user enters a command word, what it actually do
- *</p>
- *
+ *game class
+ * it will have players, room and items in it
+ * 
+ *It also contain welcome note in it
  *@author Najam
  * @version 2.1
  */
@@ -81,9 +76,9 @@ public class Game {
      */
     private void printWelcome() {
         System.out.println();
-        System.out.println("some background here:");
-        System.out.println("objective here");
-        System.out.println("include some necessary information (e.g. time limit)");
+        System.out.println("Welcome to World of Zuul ");
+        System.out.println("Your objective is to escape");
+        System.out.println("You have a time limit of 15 mins ");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
@@ -126,7 +121,7 @@ public class Game {
 
     
     /**
-     * Print out some help information. Here we print some stupid, cryptic
+     * Print out some help information. Here we print some cryptic
      * message and a list of the command words.
      */
     private void printHelp() {
@@ -141,7 +136,9 @@ public class Game {
         System.out.println("Your command words are:");
         parser.showCommands();
     }
-
+    /**
+    * This will print Inventory
+    */
     private void printInventory() {
         System.out.println(player.printAllInventory());
     }
@@ -149,6 +146,7 @@ public class Game {
     /**
      * Try to in to one direction. If there is an exit, enter the new room,
      * otherwise print an error message.
+     * 
      */
     private void goRoom(Command command) {
         if (!command.hasSecondWord()) {
@@ -166,7 +164,7 @@ public class Game {
             System.out.println("There is no door!");
         } else {
             if (currentRoom.getLockedStatus() == true) { // the door is locked
-                System.out.println("The door is locked, you need to find a way to open it");
+                System.out.println("The door is locked, you need to find a way to open it");// need to find key
                 System.out.println(currentRoom.getLongDescription());
             } else {
                 currentRoom = nextRoom;
@@ -176,7 +174,11 @@ public class Game {
             }
         }
     }
-
+    /**If there is a item to take then take it
+     * otherwise print an error message.
+     * 
+     * @param command 
+     */
     private void takeItem(Command command) {
         if (!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
@@ -200,7 +202,11 @@ public class Game {
             //System.out.println(currentRoom.getLongDescription());
         }
     }
-
+    /**
+     * there is some item to drop, then drop it
+     * otherwise print an error message.
+     * @param command 
+     */
     private void dropItem(Command command) {
         if (!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
@@ -224,7 +230,11 @@ public class Game {
             //System.out.println(currentRoom.getLongDescription());
         }
     }
-
+    /**
+     * If there is some item to use then use it
+     * otherwise print an error message.
+     * @param command 
+     */
     private void useItem(Command command) // use key
     {
         if (!command.hasSecondWord()) {

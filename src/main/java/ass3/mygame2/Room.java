@@ -5,10 +5,12 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 /**
- * Write at least 3 sentences!!!!!
+ * <b>This is a room class
+ * Here we will describe about the room with room names
+ * and also what item a room has</b>
  * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * @author  Najam
+ * @version 2.1
  */
 
 public class Room 
@@ -17,7 +19,7 @@ public class Room
     private String name;
     private boolean isLocked;
     private HashMap<String, Room> exits;        // stores exits of this room.
-    private ArrayList<Item> roomItem;
+    private ArrayList<Item> roomItem;         //array list of room items
     private HashMap<Room, Item> roomHashMapItem;
 
     /**
@@ -25,6 +27,8 @@ public class Room
      * no exits. "description" is something like "a kitchen" or
      * "an open court yard".
      * @param description The room's description.
+     * @param name room name
+     * @param isLocked if the room is locked or not
      */
     public Room(String name, String description, boolean isLocked) 
     {
@@ -64,17 +68,25 @@ public class Room
     {
         return "You are " + description + ".\n" + getExitString() + ".\n" + getAllItems();
     }
-
+    
+    /**
+     * Return the list of items that you have
+     * @return list of items
+     */
     public String getAllItems(){
 
-        return "You have some " + listOfItems();
+        return "You have some " + listOfItems();   //return list of items
 
     }
-
+    
+    /**
+     * it will add items in a string
+     * @return string of items
+     */
     private String listOfItems(){
 
         String returnString = "items:";
-        for(Item item : roomItem){
+        for(Item item : roomItem){    //for loop
             returnString += " " + item.getName();           
         }
         return returnString;
@@ -92,7 +104,7 @@ public class Room
         for(String exit : keys) {
             returnString += " " + exit;
         }
-        return returnString;
+        return returnString;   //return command
     }
 
     /**
@@ -121,17 +133,31 @@ public class Room
         }
         return itemToReturn;
     }
-
+    
+    /**
+     * it will add items in room
+     * @param item items like sword
+     */
     public void addItemInRoom(Item item){
         roomItem.add(item);
     }
-
+    
+    
+    /**
+     * It will remove items from room
+     * @param item 
+     */
     public void removeItemInRoom(Item item){
         if(roomItem.size() > 0){
             roomItem.remove(item);
         }
     }
-
+    
+    /**
+     * 
+     * @param room
+     * @param item 
+     */
     public void addHashMapItemInRoom(Room room, Item item){
         roomHashMapItem.put(room, item);
     }
@@ -145,11 +171,19 @@ public class Room
     public boolean getLockedStatus(){
         return isLocked;
     }
-
+    
+    /**
+     * get new status of room after unlock
+     * @param newStatus new status of room
+     */
     public void setLockedStatus(boolean newStatus){
         isLocked = newStatus;
     }
     
+    /**
+     * it will get name
+     * @return name
+     */
     public String getName(){
         return name;
     }

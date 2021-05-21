@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 
 /**
- * Write a description of class Player here.
+ * array list of player
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Najam
+ * @version 2.1
  */
 public class Player
 {
@@ -21,25 +21,30 @@ public class Player
     }
     
     /**
-    * Write a description of class Player here.
-    *
-    * @param (your name)
-    * @return (a version number or a date)
-    * @exception (a version number or a date)
-    * @see (a version number or a date)
-    */
+     * add item in inventory
+     * @param item 
+     */
     
     public void addItemInventory(Item item){
         playerItem.add(item);
-        System.out.println(item.getDescription() + " was taken ");
-        //System.out.println(item.getDescription() + " was removed from the room"); // add extra information to inform user that the item has been taken
-    }
-
-    public void removeItemInventory(Item item){
-        playerItem.remove(item);
-        System.out.println(item.getName() + " was removed from your inventory");
+        System.out.println(item.getDescription() + " was taken ");  //when you take an item
+        
     }
     
+    /**
+     * remove item from inventory
+     * @param item 
+     */
+    public void removeItemInventory(Item item){
+        playerItem.remove(item);
+        System.out.println(item.getName() + " was removed from your inventory"); //when you remove an item
+    }
+    
+    /**
+     * get player items
+     * @param stringItem
+     * @return item
+     */
     public Item getPlayerItem(String stringItem){
         Item itemToReturn = null;
         for(Item item: playerItem){
@@ -50,6 +55,10 @@ public class Player
         return itemToReturn;
     }
     
+    /**
+     * print inventory of player
+     * @return string
+     */
     public String printAllInventory(){
 
         String returnString = "Items:";
