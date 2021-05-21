@@ -81,7 +81,7 @@ public class Game {
      */
     private void printWelcome() {
         System.out.println();
-        System.out.println("some background here");
+        System.out.println("some background here:");
         System.out.println("objective here");
         System.out.println("include some necessary information (e.g. time limit)");
         System.out.println();
