@@ -1,6 +1,10 @@
+
+
+package ass3.mygame2;
+
 /**
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
+ * <h2>This <b>Command class</b> is part of the "World of Zuul" application </h2>
+ * <p>"World of Zuul" is a very simple, text based adventure game.  
  *
  * This class holds information about a command that was issued by the user.
  * A command currently consists of two strings: a command word and a second
@@ -9,16 +13,13 @@
  * 
  * The way this is used is: Commands are already checked for being valid
  * command words. If the user entered an invalid command (a word that is not
- * known) then the command word is <null>.
+ * known) then the command word is null.</p>
  *
- * If the command had only one word, then the second word is <null>.
+ * <br>If the command had only one word, then the second word is null.
  * 
  * @author  Najam
  * @version 2.1
  */
-
-package ass3.mygame2;
-
 public class Command
 {
     private String commandWord;

@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- *game class
- * it will have players, room and items in it
+ * <b>Game class</b>
+ * <br>It will have players, room and items in it
  * 
- *It also contain welcome note in it
+ *<br>It also contain welcome note in it
  *@author Najam
  * @version 2.1
  */
@@ -41,12 +41,12 @@ public class Game {
         player = new Player();
         rooms = new RoomCreation();
         currentRoom = rooms.getRoom("castle");  // start game outside
-        //System.out.println(createRoom.getcurrentRoom().getName());
+        
     }
     
     /**
-     * 
-     * @return currentRoom, name of current room in which user starts
+     * name of current room in which user starts
+     * @return currentRoom
      */
     public Room getCurrentRoom() {
         return currentRoom;
@@ -64,8 +64,7 @@ public class Game {
         boolean finished = false;
         while (!finished) {
             long currentTime = System.currentTimeMillis();
-            Command command = parser.getCommand();
-            // count the delta (currentTome - startTime)            
+            Command command = parser.getCommand();          
             finished = processCommand(command);
         }
         System.out.println("Thank you for playing.  Good bye.");
@@ -169,7 +168,7 @@ public class Game {
             } else {
                 currentRoom = nextRoom;
                 System.out.println(currentRoom.getLongDescription());
-                //System.out.println(currentRoom.printAllRoomItems());
+                
                 // increment the timeCounter
             }
         }
@@ -197,9 +196,7 @@ public class Game {
             currentRoom.removeItemInRoom(currentItem);
             player.addItemInventory(currentItem);
 
-            //roomItem.remove(currentItem);
-            //addItemInventory(currentItem);
-            //System.out.println(currentRoom.getLongDescription());
+            
         }
     }
     /**
@@ -225,9 +222,7 @@ public class Game {
             player.removeItemInventory(currentItem);
             currentRoom.addItemInRoom(currentItem);
 
-            //removeItemInventory(currentItem);
-            //roomItem.put(currentItem, currentRoom);
-            //System.out.println(currentRoom.getLongDescription());
+            
         }
     }
     /**
@@ -252,16 +247,8 @@ public class Game {
             // you want make sure that the currentRoom is the room where you want to open the door (before the nextdoor).
             // you want to make sure the currentItem matches the key to open the next door.
 
-            //if(currentRoom.getName().equals("castle") && currentItem.getName().equals("key")){
-            //.setLockedStatus(false);
+            
             System.out.println("You just used the " + currentItem.getName());
-
-            //if(currentRoom.getName().equals("frontYard") && currentItem.getName().equals("item1")){
-            //frontGate.setLockedStatus(false);
-            // if(currentRoom.getName().equals("castle")){
-            // //currentRoom.checkRoom("castle");
-            // roomKey.get(currentItem).setLockedStatus(false);
-            // }
             System.out.println("You cannot use this item here");
 
         }

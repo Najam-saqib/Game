@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 /**
- * array list of player
+ * array list of <b>player</b> class
  *
  * @author Najam
  * @version 2.1
@@ -22,7 +22,7 @@ public class Player
     
     /**
      * add item in inventory
-     * @param item 
+     * @param item  item
      */
     
     public void addItemInventory(Item item){
@@ -33,7 +33,7 @@ public class Player
     
     /**
      * remove item from inventory
-     * @param item 
+     * @param item item name
      */
     public void removeItemInventory(Item item){
         playerItem.remove(item);
@@ -42,7 +42,7 @@ public class Player
     
     /**
      * get player items
-     * @param stringItem
+     * @param stringItem string of item
      * @return item
      */
     public Item getPlayerItem(String stringItem){

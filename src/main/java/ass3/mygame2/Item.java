@@ -1,8 +1,8 @@
 
 package ass3.mygame2;
 /**
- * This is an Item class
- * It stores the name and description of items
+ * <b>This is an Item class</b>
+ * <br>It stores the name and description of items
  * 
  *
  * @author najam

@@ -1,15 +1,16 @@
+
+package ass3.mygame2;
+
 /**
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.
+ * <h2>This <b>command word class</b> is part of the "World of Zuul" application</h2> 
+ * <p>"World of Zuul" is a very simple, text based adventure game.
  * 
  * This class holds an enumeration of all command words known to the game.
- * It is used to recognise commands as they are typed in.
+ * It is used to recognise commands as they are typed in.</p>
  *
  * @author  Najam
  * @version 2.1
  */
-package ass3.mygame2;
-
 public class CommandWords
 {
     // a constant array that holds all valid command words
@@ -28,6 +29,7 @@ public class CommandWords
     /**
      * Check whether a given String is a valid command word. 
      * @return true if it is, false if it isn't.
+     * @param aString astring of commands
      */
     public boolean isCommand(String aString)
     {

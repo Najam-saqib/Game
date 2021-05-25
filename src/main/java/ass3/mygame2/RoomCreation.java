@@ -4,8 +4,8 @@ package ass3.mygame2;
 import java.util.ArrayList;
 
 /**
- * class for room creation
- * here we cerate new room with description and all
+ * Class for <b>Room creation</b>
+ * <br>here we cerate new room with description and all
  * 
  * @author najam
  * @version 2.1
@@ -32,9 +32,9 @@ public class RoomCreation {
 
         Room castle, kitchen, frontGate;
 
-        castle = new Room("castle", "You are at the castle", false);
-        kitchen = new Room("kitchen", "The kitchen door has a shape of a heart", false);
-        frontGate = new Room("frontGate", "There is a giant ogre", true);
+        castle = new Room("castle", "at the castle", false);
+        kitchen = new Room("kitchen", "at the kitchen door has a shape of a heart", false);
+        frontGate = new Room("frontGate", "at the front Gate, there is a giant ogre", true);
         
 
         castle.setExit("east", kitchen);  //direction and name
@@ -43,6 +43,7 @@ public class RoomCreation {
 
         castle.addItemInRoom(itemCreation.getItem("excaliburSword"));  //adding item in room
         castle.addItemInRoom(itemCreation.getItem("key"));
+        castle.addItemInRoom(itemCreation.getItem("painkiller"));
         kitchen.addItemInRoom(itemCreation.getItem("frontGateKey"));
 
         allRoomInGame.add(castle);  //adding room
@@ -54,7 +55,7 @@ public class RoomCreation {
     /**
      * it will get a specific room
      * 
-     * @param stringRoom
+     * @param stringRoom string of room
      * @return room 
      */
     public Room getRoom(String stringRoom) {

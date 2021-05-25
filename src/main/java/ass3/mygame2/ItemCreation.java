@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 /**
- * Write a description of class ItemCreation here.
+ * This is an <b>Item creation</b> class
  *
  * @author najam
  * @version 2.1
@@ -29,21 +29,24 @@ public class ItemCreation
      */
     public void createItems(){
         
-        Item item1, item2, excaliburSword, key, frontGateKey;
+        Item item1, item2, excaliburSword, key, frontGateKey, painkiller;
         
         
         excaliburSword = new Item("excaliburSword", "The legendary Excalibur", 100);
         key = new Item("key", "It has a shape of a heart", 100);
         frontGateKey = new Item("frontGateKey", "To open the front gate door", 100);
+        painkiller = new Item ("painkiller", "Used for healing", 100);
         
         allItemsInGame.add(excaliburSword);  //add item description
         allItemsInGame.add(key);
         allItemsInGame.add(frontGateKey);
+        allItemsInGame.add(painkiller);       
+        
     }
    
     /**
      * it will get items
-     * @param stringItem 
+     * @param stringItem string of item
      * @return items
      */
     public Item getItem(String stringItem){

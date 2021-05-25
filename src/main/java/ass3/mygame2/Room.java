@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 /**
- * <b>This is a room class
- * Here we will describe about the room with room names
- * and also what item a room has</b>
+ * <b>This is a room class</b>
+ * <br>Here we will describe about the room with room names
+ * <br>and also what item a room has
  * 
  * @author  Najam
  * @version 2.1
@@ -145,7 +145,7 @@ public class Room
     
     /**
      * It will remove items from room
-     * @param item 
+     * @param item remove item
      */
     public void removeItemInRoom(Item item){
         if(roomItem.size() > 0){
@@ -155,8 +155,8 @@ public class Room
     
     /**
      * 
-     * @param room
-     * @param item 
+     * @param room rooms
+     * @param item items
      */
     public void addHashMapItemInRoom(Room room, Item item){
         roomHashMapItem.put(room, item);
